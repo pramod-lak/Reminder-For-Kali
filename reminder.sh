@@ -1,9 +1,11 @@
 #!/bin/bash
 
-#Function to send a notification
-send_notification() {
-    notify-send "Test notification!" "Just testing, click to dismiss." -t 0
-}
+#Using zenity to create a dialog box
+zenity --info --text="Check if the Nmap scan has finished." --title="Reminder" --width=300 --height=200
 
-#Calling the function
-send_notification
+#Checking if the user clicked on OK
+while true; do
+    if [ $? -eq 0 ]; then
+        break
+    fi
+done
