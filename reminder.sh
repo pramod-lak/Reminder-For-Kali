@@ -3,14 +3,11 @@
 echo "Reminder is active & running..."
 
 #Using zenity to create a dialog box
-zenity --info --text="Check if the Nmap scan has finished." --title="Reminder" --width=300 --height=200 2>/dev/null
+zenity --info --text="Check if the Nmap scan has finished." --title="Reminder" --width=300 --height=200 2>/dev/null &
+zenity_pid=$!
 
-#Checking if the user clicked on OK
-while true; do
-    if [ $? -eq 0 ]; then
-        break
-    fi
-done
+#Wait for the zenity process to finish
+wait $zenity_pid
 
 echo -e "\nExiting..."
 sleep 1
