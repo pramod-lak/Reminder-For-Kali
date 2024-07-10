@@ -34,6 +34,10 @@ Follow these steps to use the Reminder for Kali.
     - Find the line with `paplay /home/user/Music/alarm-clock-elapsed.oga` and replace it with the path to your sound file.
 
 5. **Run the Reminder:**
+    - Make the script executable by running the following command.
+      ```bash
+      chmod +x reminder.sh
+      ```
     - Execute the reminder script in the terminal with the desired delay and message.
       ```bash
       ./reminder.sh -t <delay> -m <message>
