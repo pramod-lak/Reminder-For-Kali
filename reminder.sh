@@ -50,7 +50,7 @@ sleep $total_time
 play_music() {
     while true; do
         #Add your music file path here (less than 10 seconds recommended)
-        paplay /home/user/Music/10-second-count-down.mp3
+        paplay /home/user/Music/alarm-clock-elapsed.oga
     done
 }
 
